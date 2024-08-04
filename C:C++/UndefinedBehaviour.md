@@ -46,9 +46,9 @@ Different compilers, like Apple Clang and GNU GCC, may evaluate function argumen
 
 <ul>
     <li>Apple Clang might produce: <pre><code>1 $d
-    3</code></pre></li>
+3</code></pre></li>
     <li>GNU GCC might produce: <pre><code>2 $d
-    3</code></pre></li>
+3</code></pre></li>
 </ul>
 
 <h3>Explanation</h3>
