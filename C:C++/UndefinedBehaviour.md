@@ -76,6 +76,3 @@ Here is a detailed explanation of the outputs:
     </li>
 </ul>
 
-<p>
-I hope this helps clarify your query.
-</p>
