@@ -23,7 +23,7 @@ Consider the following piece of code:
 #include &lt;stdio.h&gt;
 
 void func (int i, int j) {
-    printf("%d $d\n", i, j);
+    printf("%d $d\n", i);
 }
 
 int main() {
