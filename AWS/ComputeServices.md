@@ -16,9 +16,19 @@
   <li><strong>Storage Options:</strong> Attach Amazon EBS (Elastic Block Store) for persistent storage or use instance store volumes for temporary storage. We can also use Amazon S3 for object storage.</li>
 </ul>
 
+<h3>Managing Instances Based on Traffic</h3>
+
+<p>To handle varying traffic patterns, we can use Auto Scaling and Elastic Load Balancing:</p>
+
+<ul>
+  <li><strong>Auto Scaling:</strong> Automatically adjusts the number of EC2 instances based on traffic or load. For example, we might configure Auto Scaling to launch additional instances during peak hours and reduce the number of instances during off-peak hours. This ensures optimal performance and cost efficiency.</li>
+  <li><strong>Elastic Load Balancing (ELB):</strong> Distributes incoming traffic across multiple EC2 instances, improving reliability and performance. For example, if we have multiple instances running a web application, an ELB can balance the load across these instances to ensure even distribution of traffic.</li>
+  <li><strong>Scheduled Scaling:</strong> Allows us to set specific times to scale the number of instances. For instance, we might configure Auto Scaling to increase the number of instances at 9 AM (when traffic is high) and decrease the number at 9 PM (when traffic is low).</li>
+</ul>
+
 <h3>Example of Using EC2</h3>
 
-<p>Suppose we need to host a web application. We can launch an EC2 instance with an appropriate instance type, such as t2.micro for small workloads or m5.large for larger applications. After launching the instance, we can install our web server software (like Apache or Nginx) and deploy our application on it. We can also use Elastic Load Balancing (ELB) to distribute traffic across multiple instances for better performance and reliability.</p>
+<p>Suppose we need to host a web application. We can launch an EC2 instance with an appropriate instance type, such as t2.micro for small workloads or m5.large for larger applications. After launching the instance, we can install our web server software (like Apache or Nginx) and deploy our application on it. We can also use Elastic Load Balancing (ELB) to distribute traffic across multiple instances for better performance and reliability. For managing varying traffic, we can configure Auto Scaling to increase the number of instances during peak hours and reduce them during off-peak times.</p>
 
 <h2>AWS Lambda</h2>
 
@@ -30,7 +40,7 @@
   <li><strong>Serverless:</strong> No need to manage or provision servers. Focus solely on writing code that responds to events.</li>
   <li><strong>Event-driven:</strong> Automatically triggers code in response to events from various AWS services like S3 (file uploads), DynamoDB (database changes), or API Gateway (HTTP requests).</li>
   <li><strong>Automatic Scaling:</strong> Lambda scales automatically based on the number of requests or events, ensuring high availability and performance without manual intervention.</li>
-  <li><strong>Cost-effective:</strong> Pay only for the compute time consumed by our code. There are no charges when our code is not running. Billing is based on the number of requests and execution duration.</li>
+  <li><strong>Cost-effective:</strong> Pay only for the compute time consumed by our code. There are no charges for idle server time. Billing is based on the number of requests and execution duration.</li>
   <li><strong>Integration:</strong> Seamlessly integrates with other AWS services. We can use Lambda functions for tasks such as processing data, handling API requests, or automating workflows.</li>
 </ul>
 
