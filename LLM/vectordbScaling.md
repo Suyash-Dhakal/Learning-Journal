@@ -1,6 +1,6 @@
 # Efficient Vector Database Scaling Techniques
 
-## 2. Indexing and Partitioning
+## A. Indexing and Partitioning
 
 ### Overview
 **Indexing and partitioning** are crucial techniques to scale vector databases efficiently. Indexing creates a data structure that allows for fast access and retrieval of vector embeddings, reducing the time it takes to find similar vectors. Partitioning splits the dataset into smaller chunks, enabling parallel search and reducing the number of records to search through at any given time.
@@ -35,7 +35,7 @@ Let’s say we have a vector database with embeddings of product descriptions fr
 - Partition the database by product category, such as "Electronics", "Clothing", "Books", etc., and store each category in a separate shard.
 - When a user searches for similar products, the system first determines the category of the query product and queries the corresponding shard using HNSW for fast retrieval.
 
-## 5. Batch Querying
+## B. Batch Querying
 
 ### Overview
 **Batch Querying** refers to querying multiple vectors at once rather than querying a single vector. This approach improves throughput and reduces the time spent handling individual queries, especially when dealing with large datasets or high-volume systems.
@@ -62,3 +62,7 @@ Consider a vector database that handles queries to find similar images from a la
    - You send 1000 queries in a batch, and the database processes all queries simultaneously.
    - Total comparisons = N (number of vectors in the database) for each batch, but since the queries are processed together, the overall time is reduced.
 
+### Conclusion
+Both **Indexing and Partitioning** and **Batch Querying** are essential techniques to scale vector databases effectively. Indexing improves the speed of similarity searches by organizing the data efficiently, while partitioning ensures that large datasets can be managed and queried more easily. Batch querying further enhances scalability by enabling multiple queries to be processed together, reducing overhead and improving system throughput.
+
+These are just two of many techniques used to optimize vector databases. There are several other strategies, such as **Vector Quantization**, **Approximate Nearest Neighbor Search (ANN)**, and **Caching**, that can further improve performance and scalability depending on the specific use case and system requirements.
